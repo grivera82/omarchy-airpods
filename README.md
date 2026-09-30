@@ -4,6 +4,34 @@ Omarchy bar widget for AirPods. It shows per-bud and case battery and ear
 detection, and controls noise mode, Conversational Awareness, connection and
 pairing. It also auto-pauses media when you take an AirPod out.
 
+## Install
+
+Use Omarchy's plugin manager:
+
+```
+omarchy plugin add https://github.com/grivera82/omarchy-airpods.git --enable
+```
+
+This clones the plugin into `~/.config/omarchy/plugins/grivera.airpods`, checks it,
+and adds the widget to your bar. When run interactively, it asks which bar section
+to use (default: right). Without `--enable`, you can turn it on later with:
+
+```
+omarchy plugin enable grivera.airpods --section right
+```
+
+It needs Bluetooth (BlueZ, `bluetoothctl`), `gdbus`, and Python 3, which Omarchy
+already includes. Paths starting with `bin/airpods` below are relative to the plugin
+folder.
+
+To update or uninstall:
+
+```
+omarchy plugin update grivera.airpods
+omarchy plugin disable grivera.airpods   # hide it but keep it installed
+omarchy plugin remove grivera.airpods    # delete it
+```
+
 ## Bar widget
 
 - **Left click**: open the panel.
@@ -51,5 +79,3 @@ If the panel says the control channel is unavailable, the AirPods are connected 
 audio but refused AAP. Disconnecting and reconnecting usually fixes it. Some firmware
 only enables certain features for Apple hosts. LibrePods documents setting
 `DeviceID = bluetooth:004C:0000:0000` in `/etc/bluetooth/main.conf` as a workaround.
-
-To remove: `omarchy plugin disable grivera.airpods`.
