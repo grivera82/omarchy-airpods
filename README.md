@@ -79,3 +79,7 @@ If the panel says the control channel is unavailable, the AirPods are connected 
 audio but refused AAP. Disconnecting and reconnecting usually fixes it. Some firmware
 only enables certain features for Apple hosts. LibrePods documents setting
 `DeviceID = bluetooth:004C:0000:0000` in `/etc/bluetooth/main.conf` as a workaround.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
