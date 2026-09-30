@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# AirPods control CLI (standard-library Python, no setup needed).
+ROOT="$(cd "$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")/.." && pwd)"
+exec python3 "$ROOT/lib/airpods.py" "$@"

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "grivera.airpods",
+  "name": "AirPods",
+  "version": "1.0.0",
+  "author": "grivera",
+  "description": "AirPods battery, noise control, conversational awareness, ear detection and pairing",
+  "kinds": [
+    "service",
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "service": "Service.qml",
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "AirPods",
+    "description": "AirPods battery and noise control",
+    "category": "Media",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
